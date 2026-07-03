@@ -1,0 +1,48 @@
+.login {
+  background-color: #f6f6f6;
+}
+.login:before {
+  background-color: #2699fb;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  width: 100%;
+  content: "";
+  z-index: -1;
+}
+.login .login-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translate(0px, -50%);
+}
+.login .login-left {
+  border-radius: 50px 0 0 50px;
+  background: #f6f6f6 url(../images/truck-image.png);
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  min-height: 700px;
+}
+.login .login-right {
+  padding: 0;
+  align-items: center;
+  display: flex;
+  border-radius: 0 50px 50px 0;
+}
+
+.login .login-cnt  {
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.17);
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+.login .login-cnt .card{ border-radius: 0; background-color: transparent;} 
+.login h2{
+  font-size: 26px;
+  font-weight: bold;
+  color: #2699FB;
+}
+/* // input box */
+
