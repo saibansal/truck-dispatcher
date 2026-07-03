@@ -2,7 +2,7 @@
   background-color: #f6f6f6;
 }
 .login:before {
-  background-color: #2699fb;
+  background-color: #0E73C9;
   position: absolute;
   top: 0;
   left: 0;
@@ -42,7 +42,7 @@
 .login h2{
   font-size: 26px;
   font-weight: bold;
-  color: #2699FB;
+  color: #0E73C9;
 }
 /* // input box */
 

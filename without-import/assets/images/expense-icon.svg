@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
   <g id="expense-icon" transform="translate(0.002)">
     <g id="Union_43" data-name="Union 43">
-      <rect id="Rectangle_692" data-name="Rectangle 692" width="4" height="8" transform="translate(-0.002 8)" fill="#2699fb"/>
-      <rect id="Rectangle_696" data-name="Rectangle 696" width="4" height="16" transform="translate(5.998)" fill="#2699fb"/>
-      <rect id="Rectangle_697" data-name="Rectangle 697" width="4" height="12" transform="translate(11.998 4)" fill="#2699fb"/>
+      <rect id="Rectangle_692" data-name="Rectangle 692" width="4" height="8" transform="translate(-0.002 8)" fill="#0E73C9"/>
+      <rect id="Rectangle_696" data-name="Rectangle 696" width="4" height="16" transform="translate(5.998)" fill="#0E73C9"/>
+      <rect id="Rectangle_697" data-name="Rectangle 697" width="4" height="12" transform="translate(11.998 4)" fill="#0E73C9"/>
     </g>
   </g>
 </svg>
