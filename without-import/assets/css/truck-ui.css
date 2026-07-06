@@ -2638,7 +2638,7 @@ textarea.form-control-lg {
   background-position: right 1rem center;
   -webkit-background-size: 16px 12px;
           background-size: 16px 12px;
-  border: 1px solid #1697FF;
+  border: 1px solid #0E73C9;
   -webkit-border-radius: 0.5rem;
           border-radius: 0.5rem;
   -webkit-box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.16);
@@ -2651,7 +2651,7 @@ textarea.form-control-lg {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-          color: #1697FF;
+          color: #0E73C9;
 }
 
 .form-select option{

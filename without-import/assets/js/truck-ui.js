@@ -501,4 +501,11 @@ jQuery(document).ready(function() {
         selector: 'td:nth-child(2)'
     }
   });
+
+  // Open native calendar picker when clicking anywhere in a date input
+  $('input[type="date"]').on('click', function() {
+    if (this.showPicker) {
+      this.showPicker();
+    }
+  });
 });

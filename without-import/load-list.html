@@ -1,1044 +1,2224 @@
 <!doctype html>
 <html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Load List</title>
     <link rel="shortcut icon" href="./assets/images/logo-icon.png" />
+    <link href="assets/css/select2.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="./assets/css/core/libs.min.css" />
     <link rel="stylesheet" href="./assets/vendor/aos/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/truck-ui.css" />
     <link rel="stylesheet" href="./assets/css/custom.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- loader Start -->
     <div id="loading">
-        <div class="loader simple-loader">
-            <div class="loader-body"></div>
-        </div>
+      <div class="loader simple-loader">
+        <div class="loader-body"></div>
+      </div>
     </div>
     <!-- loader END -->
-   <aside class="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all ">
-        <div class="sidebar-header d-flex align-items-center justify-content-start">
-            <a href="dashboard.html" class="navbar-brand">
-                <!--Logo start-->
-                <div class="logo-main">
-                    <div class="logo-normal">
-                        <img src="assets/images/logo-icon.png" alt="">
-                    </div>
-                    <div class="logo-mini">
-                        <img src="assets/images/logo-icon.png" alt="">
-                    </div>
-                </div>
-                <h4 class="logo-title text-white">X-CODE</h4>
-            </a>
-            <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
+    <aside
+      class="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all"
+    >
+      <div
+        class="sidebar-header d-flex align-items-center justify-content-start"
+      >
+        <a href="dashboard.html" class="navbar-brand">
+          <!--Logo start-->
+          <div class="logo-main">
+            <div class="logo-normal">
+              <img src="assets/images/logo-icon.png" alt="" />
+            </div>
+            <div class="logo-mini">
+              <img src="assets/images/logo-icon.png" alt="" />
+            </div>
+          </div>
+          <h4 class="logo-title text-white">X-CODE</h4>
+        </a>
+        <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
+          <i class="icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.25 12.2744L19.25 12.2744"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </i>
+        </div>
+      </div>
+      <div class="sidebar-body pt-0 data-scrollbar">
+        <div class="sidebar-list">
+          <!-- Sidebar Menu Start -->
+          <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
                 <i class="icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.25 12.2744L19.25 12.2744" stroke="currentColor" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
+                  <img src="assets/images/dashboard-icon.svg" alt="" />
                 </i>
-            </div>
+                <span class="item-name">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#driver-auth"
+                role="button"
+                aria-expanded="false"
+                aria-controls="sidebar-user"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M138,16a8,8,0,1,1,8-8A8.024,8.024,0,0,1,138,16Zm4-12-3.9,1.8a5.12,5.12,0,0,0-2.3,2.3L134,12l3.9-1.8a5.12,5.12,0,0,0,2.3-2.3Z"
+                      transform="translate(-130)"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Manage Loads</span>
+                <i class="right-icon">
+                  <svg
+                    class="icon-18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </i>
+              </a>
+              <ul
+                class="sub-nav collapse"
+                id="driver-auth"
+                data-bs-parent="#sidebar-menu"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="load-list.html"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="sidebar-user"
+                  >
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">Load List</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="add-load.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">Add New Load </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="trip-load-child-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+
+                    <span class="item-name">Trip List </span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="trip-manifest-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+
+                    <span class="item-name">Trip Manifest</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#loads-auth"
+                role="button"
+                aria-expanded="false"
+                aria-controls="sidebar-user"
+              >
+                <i class="icon">
+                  <svg
+                    id="driver-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      id="steering"
+                      d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,2a6,6,0,0,1,5.633,4H2.367A6,6,0,0,1,8,2ZM8,9a1,1,0,1,1,.977-1A1,1,0,0,1,8,9ZM2,8c2.733,0,4.946,2.633,4.992,5.9A6,6,0,0,1,2,8Zm7.008,5.9C9.055,10.633,11.267,8,14,8A6,6,0,0,1,9.008,13.9Z"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Manage Fleet</span>
+                <i class="right-icon">
+                  <svg
+                    class="icon-18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </i>
+              </a>
+              <ul
+                class="sub-nav collapse"
+                id="loads-auth"
+                data-bs-parent="#sidebar-menu"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="carrier-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+
+                    <span class="item-name">Carrier </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="truck-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">Trucks</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="trailer-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">Trailers</span>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="driver-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">Drivers</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#manage-payments"
+                role="button"
+                aria-expanded="false"
+                aria-controls="sidebar-user"
+              >
+                <i class="icon">
+                  <svg
+                    id="invoice-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14.986"
+                    height="16.83"
+                    viewBox="0 0 14.986 16.83"
+                  >
+                    <path
+                      id="Path_14"
+                      data-name="Path 14"
+                      d="M16.788,17.844,16.819,2.79,15.174,2l-1.65.79L11.879,2l-1.651.79L8.583,2l-1.651.79L5.281,2l-1.65.79L3.6,17.844l1.385.3,1.911-.3,1.384.3,1.912-.3,1.384.3,1.912-.3,1.39.3Z"
+                      transform="translate(-2.631 -2)"
+                      fill="#0E73C9"
+                    />
+                    <path
+                      id="Path_15"
+                      data-name="Path 15"
+                      d="M17.428,1.981,15.685,1.15a.507.507,0,0,0-.437,0l-1.53.727L12.2,1.15a.509.509,0,0,0-.437,0l-1.53.727L8.7,1.15a.507.507,0,0,0-.437,0l-1.53.727L5.207,1.15a.508.508,0,0,0-.436,0l-1.75.831a.508.508,0,0,0-.29.459V16.59a.509.509,0,0,0,.29.459l1.743.831a.507.507,0,0,0,.437,0l1.53-.727,1.524.727a.509.509,0,0,0,.437,0l1.53-.727,1.524.727a.507.507,0,0,0,.437,0l1.53-.727,1.53.727a.508.508,0,0,0,.436,0l1.748-.831a.508.508,0,0,0,.29-.459V2.44A.506.506,0,0,0,17.428,1.981ZM16.7,16.268l-1.24.59-1.53-.727a.508.508,0,0,0-.436,0l-1.53.727-1.524-.727a.507.507,0,0,0-.437,0l-1.53.727-1.524-.727a.509.509,0,0,0-.437,0l-1.53.727-1.236-.589V2.761l1.24-.59,1.53.727a.508.508,0,0,0,.436,0l1.53-.727,1.524.727a.507.507,0,0,0,.437,0l1.53-.727L13.5,2.9a.509.509,0,0,0,.437,0l1.53-.727,1.235.589V16.268Z"
+                      transform="translate(-2.731 -1.101)"
+                      fill="#0E73C9"
+                    />
+                    <path
+                      id="Path_16"
+                      data-name="Path 16"
+                      d="M15.691,12.019c1.079.195,1.358.428,1.354.524-.018.544-1.733.615-1.975.622a.9.9,0,0,0-.919-.685.807.807,0,0,0-.88.7,1.276,1.276,0,0,0,.545,1.016,2.06,2.06,0,0,0,1.176.392v.13a.823.823,0,0,0,.9.712.823.823,0,0,0,.9-.712v-.32a4.257,4.257,0,0,0,1.313-.548,1.475,1.475,0,0,0,.74-1.264c.031-.959-.9-1.614-2.755-1.949-1.3-.234-1.346-.48-1.342-.528.044-.511,1.4-.6,1.962-.629a.925.925,0,0,0,1.8,0,1.3,1.3,0,0,0-.546-1.019,2,2,0,0,0-1.171-.388V7.937a.823.823,0,0,0-.9-.712.823.823,0,0,0-.9.712v.321c-1.634.378-1.994,1.209-2.041,1.75C12.868,11,13.789,11.678,15.691,12.019Z"
+                      transform="translate(-7.947 -3.225)"
+                      fill="#fff"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Manage Payments</span>
+                <i class="right-icon">
+                  <svg
+                    class="icon-18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </i>
+              </a>
+              <ul
+                class="sub-nav collapse"
+                id="manage-payments"
+                data-bs-parent="#sidebar-menu"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="expense-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+
+                    <span class="item-name">Expenses</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="invoice-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">Invoices</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="compliance-list.html">
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13.538"
+                    height="17.599"
+                    viewBox="0 0 13.538 17.599"
+                  >
+                    <path
+                      d="M104.123,48h-6.43A1.692,1.692,0,0,0,96,49.692V63.907A1.692,1.692,0,0,0,97.692,65.6h10.153a1.692,1.692,0,0,0,1.692-1.692V53.415Zm-.677,6.092V49.354l4.738,4.738Z"
+                      transform="translate(-96 -48)"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Compliance</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#trucks-auth"
+                role="button"
+                aria-expanded="false"
+                aria-controls="sidebar-user"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15.944"
+                    height="13.095"
+                    viewBox="0 0 15.944 13.095"
+                  >
+                    <rect
+                      width="15.944"
+                      height="11.856"
+                      transform="translate(0 0.653)"
+                      fill="none"
+                    />
+                    <path
+                      d="M6.076,6.547A1.694,1.694,0,0,1,7.813,8.184,1.694,1.694,0,0,1,6.076,9.821,1.694,1.694,0,0,1,4.34,8.184,1.694,1.694,0,0,1,6.076,6.547Zm0-4.911A1.694,1.694,0,0,0,4.34,3.274H7.813A1.694,1.694,0,0,0,6.076,1.637Zm4.34,11.458H1.736A1.694,1.694,0,0,1,0,11.458V4.911A1.694,1.694,0,0,1,1.736,3.274H2.6A3.387,3.387,0,0,1,6.076,0,3.387,3.387,0,0,1,9.549,3.274h.868a1.694,1.694,0,0,1,1.736,1.637v6.547A1.694,1.694,0,0,1,10.417,13.095Z"
+                      transform="translate(2.213)"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Customer</span>
+                <i class="right-icon">
+                  <svg
+                    class="icon-18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </i>
+              </a>
+              <ul
+                class="sub-nav collapse"
+                id="trucks-auth"
+                data-bs-parent="#sidebar-menu"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="user-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">Customer List</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="add-user.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">Add Customer</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13.638"
+                    height="13.638"
+                    viewBox="0 0 13.638 13.638"
+                  >
+                    <path
+                      d="M0,0V3.409H13.638V0ZM2.557,2.557H.852V.852h1.7ZM0,8.523H13.638V5.114H0ZM.852,5.966h1.7v1.7H.852ZM0,13.638H13.638V10.228H0ZM.852,11.08h1.7v1.7H.852Z"
+                      transform="translate(0)"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Branch Locations</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#trailers-auth"
+                role="button"
+                aria-expanded="false"
+                aria-controls="sidebar-user"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      cx="4"
+                      cy="4"
+                      r="4"
+                      transform="translate(4)"
+                      fill="#0E73C9"
+                    />
+                    <path
+                      d="M8,10c-4.4,0-8,1.8-8,4v2H16V14C16,11.8,12.4,10,8,10Z"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Manage Staff</span>
+                <i class="right-icon">
+                  <svg
+                    class="icon-18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </i>
+              </a>
+              <ul
+                class="sub-nav collapse"
+                id="trailers-auth"
+                data-bs-parent="#sidebar-menu"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="staff-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+
+                    <span class="item-name">Staff List</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="role-list.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+
+                    <span class="item-name">Roles</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#expenses-auth"
+                role="button"
+                aria-expanded="false"
+                aria-controls="sidebar-user"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13.538"
+                    height="17.599"
+                    viewBox="0 0 13.538 17.599"
+                  >
+                    <path
+                      d="M104.123,48h-6.43A1.692,1.692,0,0,0,96,49.692V63.907A1.692,1.692,0,0,0,97.692,65.6h10.153a1.692,1.692,0,0,0,1.692-1.692V53.415Zm-.677,6.092V49.354l4.738,4.738Z"
+                      transform="translate(-96 -48)"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Manage Reports</span>
+                <i class="right-icon">
+                  <svg
+                    class="icon-18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </i>
+              </a>
+              <ul
+                class="sub-nav collapse"
+                id="expenses-auth"
+                data-bs-parent="#sidebar-menu"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="reports.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+
+                    <span class="item-name">Business Reports</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reports.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+
+                    <span class="item-name">Fleet Reports</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reports.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+
+                    <span class="item-name">Payment Reports</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#invoices-auth"
+                role="button"
+                aria-expanded="false"
+                aria-controls="sidebar-user"
+              >
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16.2"
+                    height="16"
+                    viewBox="0 0 16.2 16"
+                  >
+                    <rect width="16" height="16" fill="none" />
+                    <path
+                      d="M267.5,10a2,2,0,1,0-2-2A2.006,2.006,0,0,0,267.5,10Zm-4.1-6.4a5.64,5.64,0,0,1,2.4-1.3l.8-2.3h2l.8,2.3a6.983,6.983,0,0,1,2.4,1.3l2.4-.5,1,1.8-1.6,1.8a5.7,5.7,0,0,1,.1,1.3c0,.4-.1.9-.1,1.3l1.6,1.8-1,1.8-2.4-.5a5.64,5.64,0,0,1-2.4,1.3l-.8,2.3h-2l-.8-2.3a6.983,6.983,0,0,1-2.4-1.3l-2.4.5-1-1.8,1.6-1.8a5.7,5.7,0,0,1-.1-1.3c0-.4.1-.9.1-1.3L260,4.9l1-1.8Z"
+                      transform="translate(-259)"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">System Settings</span>
+                <i class="right-icon">
+                  <svg
+                    class="icon-18"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </i>
+              </a>
+              <ul
+                class="sub-nav collapse"
+                id="invoices-auth"
+                data-bs-parent="#sidebar-menu"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="general-settings.html">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">General Settings</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="icon">
+                      <svg
+                        class="icon-10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="10"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <g>
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="8"
+                            fill="currentColor"
+                          ></circle>
+                        </g>
+                      </svg>
+                    </i>
+                    <span class="item-name">Schedule Backup</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="invoice-list.html">
+                <i class="icon">
+                  <svg
+                    id="dashboard-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      id="Path_102"
+                      data-name="Path 102"
+                      d="M0,14H16v2H0ZM0,7H16v5H0ZM7,0h9V5H7ZM0,0H5V5H0Z"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Manage Invoice</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="add-route.html">
+                <i class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <rect
+                      width="16"
+                      height="16"
+                      transform="translate(0 0)"
+                      fill="none"
+                    />
+                    <path
+                      d="M6.58,9.47A2.786,2.786,0,0,0,9.371,6.679,2.872,2.872,0,0,0,6.58,3.788,2.786,2.786,0,0,0,3.788,6.579,2.942,2.942,0,0,0,6.58,9.47ZM1.894,1.894a6.626,6.626,0,0,1,9.371,9.371L6.58,15.95,1.894,11.265A6.807,6.807,0,0,1,1.894,1.894Z"
+                      transform="translate(0.975 0.05)"
+                      fill="#0E73C9"
+                    />
+                  </svg>
+                </i>
+                <span class="item-name">Create Route</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Sidebar Menu End -->
         </div>
-        <div class="sidebar-body pt-0 data-scrollbar">
-            <div class="sidebar-list">
-                <!-- Sidebar Menu Start -->
-                <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
-                    <li class="nav-item">
-                        <a class="nav-link " href="dashboard.html">
-                            <i class="icon"> <img src="assets/images/dashboard-icon.svg" alt=""> </i>
-                            <span class="item-name">Dashboard</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#driver-auth" role="button"
-                            aria-expanded="false" aria-controls="sidebar-user">
-                            <i class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                    <path
-                                        d="M138,16a8,8,0,1,1,8-8A8.024,8.024,0,0,1,138,16Zm4-12-3.9,1.8a5.12,5.12,0,0,0-2.3,2.3L134,12l3.9-1.8a5.12,5.12,0,0,0,2.3-2.3Z"
-                                        transform="translate(-130)" fill="#0E73C9" />
-                                </svg>
-                            </i>
-                            <span class="item-name">Manage Loads</span>
-                            <i class="right-icon">
-                                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-
-
-                            </i>
-                        </a>
-                        <ul class="sub-nav collapse" id="driver-auth" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="load-list.html" role="button" aria-expanded="false"
-                                    aria-controls="sidebar-user">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">Load List</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="add-load.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">Add New Load </span>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="trip-load-child-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-
-                                    <span class="item-name">Trip List </span>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="trip-manifest-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-
-                                    <span class="item-name">Trip Manifest</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#loads-auth" role="button"
-                            aria-expanded="false" aria-controls="sidebar-user">
-                            <i class="icon">
-                                <svg id="driver-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                    <path id="steering" d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,2a6,6,0,0,1,5.633,4H2.367A6,6,0,0,1,8,2ZM8,9a1,1,0,1,1,.977-1A1,1,0,0,1,8,9ZM2,8c2.733,0,4.946,2.633,4.992,5.9A6,6,0,0,1,2,8Zm7.008,5.9C9.055,10.633,11.267,8,14,8A6,6,0,0,1,9.008,13.9Z" fill="#0E73C9"/>
-                                  </svg>
-                            </i>
-                            <span class="item-name">Manage Fleet</span>
-                            <i class="right-icon">
-                                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
-                        </a>
-                        <ul class="sub-nav collapse" id="loads-auth" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="carrier-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-
-                                    <span class="item-name">Carrier </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="truck-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">Trucks</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="trailer-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">Trailers</span>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="driver-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">Drivers</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#manage-payments" role="button"
-                            aria-expanded="false" aria-controls="sidebar-user">
-                            <i class="icon">
-                                <svg id="invoice-icon" xmlns="http://www.w3.org/2000/svg" width="14.986" height="16.83" viewBox="0 0 14.986 16.83">
-                                    <path id="Path_14" data-name="Path 14" d="M16.788,17.844,16.819,2.79,15.174,2l-1.65.79L11.879,2l-1.651.79L8.583,2l-1.651.79L5.281,2l-1.65.79L3.6,17.844l1.385.3,1.911-.3,1.384.3,1.912-.3,1.384.3,1.912-.3,1.39.3Z" transform="translate(-2.631 -2)" fill="#0E73C9"/>
-                                    <path id="Path_15" data-name="Path 15" d="M17.428,1.981,15.685,1.15a.507.507,0,0,0-.437,0l-1.53.727L12.2,1.15a.509.509,0,0,0-.437,0l-1.53.727L8.7,1.15a.507.507,0,0,0-.437,0l-1.53.727L5.207,1.15a.508.508,0,0,0-.436,0l-1.75.831a.508.508,0,0,0-.29.459V16.59a.509.509,0,0,0,.29.459l1.743.831a.507.507,0,0,0,.437,0l1.53-.727,1.524.727a.509.509,0,0,0,.437,0l1.53-.727,1.524.727a.507.507,0,0,0,.437,0l1.53-.727,1.53.727a.508.508,0,0,0,.436,0l1.748-.831a.508.508,0,0,0,.29-.459V2.44A.506.506,0,0,0,17.428,1.981ZM16.7,16.268l-1.24.59-1.53-.727a.508.508,0,0,0-.436,0l-1.53.727-1.524-.727a.507.507,0,0,0-.437,0l-1.53.727-1.524-.727a.509.509,0,0,0-.437,0l-1.53.727-1.236-.589V2.761l1.24-.59,1.53.727a.508.508,0,0,0,.436,0l1.53-.727,1.524.727a.507.507,0,0,0,.437,0l1.53-.727L13.5,2.9a.509.509,0,0,0,.437,0l1.53-.727,1.235.589V16.268Z" transform="translate(-2.731 -1.101)" fill="#0E73C9"/>
-                                    <path id="Path_16" data-name="Path 16" d="M15.691,12.019c1.079.195,1.358.428,1.354.524-.018.544-1.733.615-1.975.622a.9.9,0,0,0-.919-.685.807.807,0,0,0-.88.7,1.276,1.276,0,0,0,.545,1.016,2.06,2.06,0,0,0,1.176.392v.13a.823.823,0,0,0,.9.712.823.823,0,0,0,.9-.712v-.32a4.257,4.257,0,0,0,1.313-.548,1.475,1.475,0,0,0,.74-1.264c.031-.959-.9-1.614-2.755-1.949-1.3-.234-1.346-.48-1.342-.528.044-.511,1.4-.6,1.962-.629a.925.925,0,0,0,1.8,0,1.3,1.3,0,0,0-.546-1.019,2,2,0,0,0-1.171-.388V7.937a.823.823,0,0,0-.9-.712.823.823,0,0,0-.9.712v.321c-1.634.378-1.994,1.209-2.041,1.75C12.868,11,13.789,11.678,15.691,12.019Z" transform="translate(-7.947 -3.225)" fill="#fff"/>
-                                  </svg>
-                            </i>
-                            <span class="item-name">Manage Payments</span>
-                            <i class="right-icon">
-                                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
-                        </a>
-                        <ul class="sub-nav collapse" id="manage-payments" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="expense-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-
-                                    <span class="item-name">Expenses</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="invoice-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">Invoices</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="compliance-list.html">
-                            <i class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="13.538" height="17.599" viewBox="0 0 13.538 17.599"><path d="M104.123,48h-6.43A1.692,1.692,0,0,0,96,49.692V63.907A1.692,1.692,0,0,0,97.692,65.6h10.153a1.692,1.692,0,0,0,1.692-1.692V53.415Zm-.677,6.092V49.354l4.738,4.738Z" transform="translate(-96 -48)" fill="#0E73C9"/></svg> </i>
-                            <span class="item-name">Compliance</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#trucks-auth" role="button"
-                            aria-expanded="false" aria-controls="sidebar-user">
-                            <i class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15.944" height="13.095" viewBox="0 0 15.944 13.095"><rect width="15.944" height="11.856" transform="translate(0 0.653)" fill="none"/><path d="M6.076,6.547A1.694,1.694,0,0,1,7.813,8.184,1.694,1.694,0,0,1,6.076,9.821,1.694,1.694,0,0,1,4.34,8.184,1.694,1.694,0,0,1,6.076,6.547Zm0-4.911A1.694,1.694,0,0,0,4.34,3.274H7.813A1.694,1.694,0,0,0,6.076,1.637Zm4.34,11.458H1.736A1.694,1.694,0,0,1,0,11.458V4.911A1.694,1.694,0,0,1,1.736,3.274H2.6A3.387,3.387,0,0,1,6.076,0,3.387,3.387,0,0,1,9.549,3.274h.868a1.694,1.694,0,0,1,1.736,1.637v6.547A1.694,1.694,0,0,1,10.417,13.095Z" transform="translate(2.213)" fill="#0E73C9"/></svg>
-                            </i>
-                            <span class="item-name">Customer</span>
-                            <i class="right-icon">
-                                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
-                        </a>
-                        <ul class="sub-nav collapse" id="trucks-auth" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="user-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">Customer List</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="add-user.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">Add Customer</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="#">
-                            <i class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="13.638" height="13.638" viewBox="0 0 13.638 13.638"><path d="M0,0V3.409H13.638V0ZM2.557,2.557H.852V.852h1.7ZM0,8.523H13.638V5.114H0ZM.852,5.966h1.7v1.7H.852ZM0,13.638H13.638V10.228H0ZM.852,11.08h1.7v1.7H.852Z" transform="translate(0)" fill="#0E73C9"/></svg> </i>
-                            <span class="item-name">Branch Locations</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#trailers-auth" role="button"
-                            aria-expanded="false" aria-controls="sidebar-user">
-                            <i class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="4" cy="4" r="4" transform="translate(4)" fill="#0E73C9"/><path d="M8,10c-4.4,0-8,1.8-8,4v2H16V14C16,11.8,12.4,10,8,10Z" fill="#0E73C9"/></svg>
-                            </i>
-                            <span class="item-name">Manage Staff</span>
-                            <i class="right-icon">
-                                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
-                        </a>
-                        <ul class="sub-nav collapse" id="trailers-auth" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="staff-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-
-                                    <span class="item-name">Staff List</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="role-list.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-
-                                    <span class="item-name">Roles</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#expenses-auth" role="button"
-                            aria-expanded="false" aria-controls="sidebar-user">
-                            <i class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13.538" height="17.599" viewBox="0 0 13.538 17.599"><path d="M104.123,48h-6.43A1.692,1.692,0,0,0,96,49.692V63.907A1.692,1.692,0,0,0,97.692,65.6h10.153a1.692,1.692,0,0,0,1.692-1.692V53.415Zm-.677,6.092V49.354l4.738,4.738Z" transform="translate(-96 -48)" fill="#0E73C9"/></svg>
-                            </i>
-                            <span class="item-name">Manage Reports</span>
-                            <i class="right-icon">
-                                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
-                        </a>
-                        <ul class="sub-nav collapse" id="expenses-auth" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="reports.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-
-                                    <span class="item-name">Business Reports</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="reports.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-
-                                    <span class="item-name">Fleet Reports</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="reports.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-
-                                    <span class="item-name">Payment Reports</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#invoices-auth" role="button"
-                            aria-expanded="false" aria-controls="sidebar-user">
-                            <i class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16.2" height="16" viewBox="0 0 16.2 16"><rect width="16" height="16" fill="none"/><path d="M267.5,10a2,2,0,1,0-2-2A2.006,2.006,0,0,0,267.5,10Zm-4.1-6.4a5.64,5.64,0,0,1,2.4-1.3l.8-2.3h2l.8,2.3a6.983,6.983,0,0,1,2.4,1.3l2.4-.5,1,1.8-1.6,1.8a5.7,5.7,0,0,1,.1,1.3c0,.4-.1.9-.1,1.3l1.6,1.8-1,1.8-2.4-.5a5.64,5.64,0,0,1-2.4,1.3l-.8,2.3h-2l-.8-2.3a6.983,6.983,0,0,1-2.4-1.3l-2.4.5-1-1.8,1.6-1.8a5.7,5.7,0,0,1-.1-1.3c0-.4.1-.9.1-1.3L260,4.9l1-1.8Z" transform="translate(-259)" fill="#0E73C9"/></svg>
-                            </i>
-                            <span class="item-name">System Settings</span>
-                            <i class="right-icon">
-                                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
-                        </a>
-                        <ul class="sub-nav collapse" id="invoices-auth" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="general-settings.html">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">General Settings</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="icon">
-                                        <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10"
-                                            viewBox="0 0 24 24" fill="currentColor">
-                                            <g>
-                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                                            </g>
-                                        </svg>
-                                    </i>
-                                    <span class="item-name">Schedule Backup</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="invoice-list.html">
-                            <i class="icon">
-                                <svg id="dashboard-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path id="Path_102" data-name="Path 102" d="M0,14H16v2H0ZM0,7H16v5H0ZM7,0h9V5H7ZM0,0H5V5H0Z" fill="#0E73C9"/></svg>
-                            </i>
-                            <span class="item-name">Manage Invoice</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="add-route.html">
-                            <i class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><rect width="16" height="16" transform="translate(0 0)" fill="none"/><path d="M6.58,9.47A2.786,2.786,0,0,0,9.371,6.679,2.872,2.872,0,0,0,6.58,3.788,2.786,2.786,0,0,0,3.788,6.579,2.942,2.942,0,0,0,6.58,9.47ZM1.894,1.894a6.626,6.626,0,0,1,9.371,9.371L6.58,15.95,1.894,11.265A6.807,6.807,0,0,1,1.894,1.894Z" transform="translate(0.975 0.05)" fill="#0E73C9"/></svg>
-                            </i>
-                            <span class="item-name">Create Route</span>
-                        </a>
-                    </li>
-                </ul>
-                <!-- Sidebar Menu End -->
-            </div>
-        </div>
-        <div class="sidebar-footer"></div>
+      </div>
+      <div class="sidebar-footer"></div>
     </aside>
 
-
     <main class="main-content">
-        <div class="position-relative iq-banner">
-            <!--Nav Start-->
-           <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar">
-                <div class="container-fluid navbar-inner">
-                    <a href="../dashboard/index.html" class="navbar-brand">
-                        <div class="logo-main">
-                            <div class="logo-normal">
-                                <img src="assets/images/logo-icon.png" alt="">
-                            </div>
-                            <div class="logo-mini">
-                                <svg class="text-primary icon-30" viewBox="0 0 30 30" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="-0.757324" y="19.2427" width="28" height="4" rx="2"
-                                        transform="rotate(-45 -0.757324 19.2427)" fill="currentColor" />
-                                    <rect x="7.72803" y="27.728" width="28" height="4" rx="2"
-                                        transform="rotate(-45 7.72803 27.728)" fill="currentColor" />
-                                    <rect x="10.5366" y="16.3945" width="16" height="4" rx="2"
-                                        transform="rotate(45 10.5366 16.3945)" fill="currentColor" />
-                                    <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2"
-                                        transform="rotate(45 10.5562 -0.556152)" fill="currentColor" />
-                                </svg>
-                            </div>
-                        </div>
-                        <h4 class="logo-title">Logo Here</h4>
-                    </a>
+      <div class="position-relative iq-banner">
+        <!--Nav Start-->
+        <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar">
+          <div class="container-fluid navbar-inner">
+            <a href="../dashboard/index.html" class="navbar-brand">
+              <div class="logo-main">
+                <div class="logo-normal">
+                  <img src="assets/images/logo-icon.png" alt="" />
+                </div>
+                <div class="logo-mini">
+                  <svg
+                    class="text-primary icon-30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="-0.757324"
+                      y="19.2427"
+                      width="28"
+                      height="4"
+                      rx="2"
+                      transform="rotate(-45 -0.757324 19.2427)"
+                      fill="currentColor"
+                    />
+                    <rect
+                      x="7.72803"
+                      y="27.728"
+                      width="28"
+                      height="4"
+                      rx="2"
+                      transform="rotate(-45 7.72803 27.728)"
+                      fill="currentColor"
+                    />
+                    <rect
+                      x="10.5366"
+                      y="16.3945"
+                      width="16"
+                      height="4"
+                      rx="2"
+                      transform="rotate(45 10.5366 16.3945)"
+                      fill="currentColor"
+                    />
+                    <rect
+                      x="10.5562"
+                      y="-0.556152"
+                      width="28"
+                      height="4"
+                      rx="2"
+                      transform="rotate(45 10.5562 -0.556152)"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h4 class="logo-title">Logo Here</h4>
+            </a>
 
+            <span>
+              <a href="#" type="button" class="btn btn-sm header-light-button"
+                >Add New Load</a
+              >
+              <a href="#" type="button" class="btn btn-sm header-light-button"
+                >Add Driver</a
+              >
+              <a href="#" type="button" class="btn btn-sm header-light-button"
+                >Add Expenses</a
+              >
+            </span>
 
-                   <span>
-                     <a href="#" type="button" class="btn btn-sm header-light-button">Add New Load</a>
-                    <a href="#" type="button" class="btn btn-sm header-light-button">Add Driver</a>
-                    <a href="#"  type="button" class="btn btn-sm header-light-button">Add Expenses</a>
-
-                   </span>
-
-
-
-
-                     
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-toggle="sidebar"
-                        data-active="true">
-                        <span class="navbar-toggler-icon">
-                            <span class="mt-2 navbar-toggler-bar bar1"></span>
-                            <span class="navbar-toggler-bar bar2"></span>
-                            <span class="navbar-toggler-bar bar3"></span>
-                        </span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="mb-2 navbar-nav ms-auto align-items-center navbar-list mb-lg-0">
-                            <li>
-                                <div class="input-group search-input">
-                                    <span class="input-group-text" id="search-input">
-                                        <svg class="icon-18" width="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
-                                            <path d="M18.0186 18.4851L21.5426 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </span>
-                                    <input type="search" class="form-control" placeholder="Search...">
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="py-0 nav-link d-flex align-items-center" href="#" id="navbarDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./assets/images/avatars/01.png" alt="User-Profile"
-                                        class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded">
-                                    <img src="./assets/images/avatars/avtar_1.png" alt="User-Profile"
-                                        class="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded">
-                                    <img src="./assets/images/avatars/avtar_2.png" alt="User-Profile"
-                                        class="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded">
-                                    <img src="./assets/images/avatars/avtar_4.png" alt="User-Profile"
-                                        class="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded">
-                                    <img src="./assets/images/avatars/avtar_5.png" alt="User-Profile"
-                                        class="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded">
-                                    <img src="./assets/images/avatars/avtar_3.png" alt="User-Profile"
-                                        class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded">
-                                    <div class="caption ms-3 d-none d-md-block ">
-                                        <h6 class="mb-0 text-white caption-title">Austin Robertson</h6>
-                                        <p class="mb-0 text-white caption-sub-title">Marketing Administrator</p>
-                                    </div>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="../dashboard/app/user-profile.html">Profile</a>
-                                    </li>
-                                    <li><a class="dropdown-item"
-                                            href="../dashboard/app/user-privacy-setting.html">Privacy Setting</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-toggle="sidebar"
+              data-active="true"
+            >
+              <span class="navbar-toggler-icon">
+                <span class="mt-2 navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul
+                class="mb-2 navbar-nav ms-auto align-items-center navbar-list mb-lg-0"
+              >
+                <li>
+                  <div class="input-group search-input">
+                    <span class="input-group-text" id="search-input">
+                      <svg
+                        class="icon-18"
+                        width="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="11.7669"
+                          cy="11.7666"
+                          r="8.98856"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></circle>
+                        <path
+                          d="M18.0186 18.4851L21.5426 22"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
+                    <input
+                      type="search"
+                      class="form-control"
+                      placeholder="Search..."
+                    />
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="py-0 nav-link d-flex align-items-center"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="./assets/images/avatars/01.png"
+                      alt="User-Profile"
+                      class="theme-color-default-img img-fluid avatar avatar-50 avatar-rounded"
+                    />
+                    <img
+                      src="./assets/images/avatars/avtar_1.png"
+                      alt="User-Profile"
+                      class="theme-color-purple-img img-fluid avatar avatar-50 avatar-rounded"
+                    />
+                    <img
+                      src="./assets/images/avatars/avtar_2.png"
+                      alt="User-Profile"
+                      class="theme-color-blue-img img-fluid avatar avatar-50 avatar-rounded"
+                    />
+                    <img
+                      src="./assets/images/avatars/avtar_4.png"
+                      alt="User-Profile"
+                      class="theme-color-green-img img-fluid avatar avatar-50 avatar-rounded"
+                    />
+                    <img
+                      src="./assets/images/avatars/avtar_5.png"
+                      alt="User-Profile"
+                      class="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded"
+                    />
+                    <img
+                      src="./assets/images/avatars/avtar_3.png"
+                      alt="User-Profile"
+                      class="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded"
+                    />
+                    <div class="caption ms-3 d-none d-md-block">
+                      <h6 class="mb-0 text-white caption-title">
+                        Austin Robertson
+                      </h6>
+                      <p class="mb-0 text-white caption-sub-title">
+                        Marketing Administrator
+                      </p>
                     </div>
-                </div>
-            </nav>
-            <!-- Nav Header Component Start -->
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../dashboard/app/user-profile.html"
+                        >Profile</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../dashboard/app/user-privacy-setting.html"
+                        >Privacy Setting</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="login.html">Logout</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Nav Header Component Start -->
 
-            <!-- Nav Header Component Start -->
-            <div class="iq-navbar-header">
-                <div class="iq-container">
-                    <div class="card ">
-                        <div class="card-header d-flex justify-content-between">
-                            <div class="header-title">
-                                <h4 class="card-title text-primary">Load List <a href="add-load.html">Add Load</a>                                    
-                                </h4>
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Load</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page"><a href="#">Load List</a> </li>
-                                    </ol>
-                                </nav>
+        <!-- Nav Header Component Start -->
+        <div class="iq-navbar-header">
+          <div class="iq-container">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <div class="header-title">
+                  <h4 class="card-title text-primary">
+                    Load List <a href="add-load.html">Add Load</a>
+                  </h4>
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                      <li class="breadcrumb-item"><a href="#">Load</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        <a href="#">Load List</a>
+                      </li>
+                    </ol>
+                  </nav>
 
-                                <div class="stats-row">
-        <!-- Available Drivers -->
-         <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            padding: 40px;
-            background-color: #ffffff;
-        }
-        .stats-row {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-        .stat-badge {
-            display: flex;
-            align-items: stretch;
-            border-radius: 6px;
-            overflow: hidden;
-            background-color: #ffffff;
-            height: 32px;
-            font-size: 14px;
-            font-weight: 600;
-            border: 1px solid var(--theme-color);
-        }
-        .stat-label {
-            padding: 0 12px;
-            display: flex;
-            align-items: center;
-            color: var(--theme-color);
-        }
-        .stat-value {
-            padding: 0 12px;
-            display: flex;
-            align-items: center;
-            color: #ffffff;
-            background-color: var(--bg-color, var(--theme-color));
-        }
-        /* Specific Themes */
-        .theme-blue {
-            --theme-color: #0070c0;
-        }
-        .theme-orange {
-            --theme-color: #ff8000;
-        }
-        .theme-olive {
-            --theme-color: #a49f00;
-        }
-        /* Multi-color block overrides */
-        .bg-green {
-            --bg-color: #22c55e;
-        }
-        
-        .bg-gray {
-            --bg-color: #808080;
-        }
-        
-        .bg-red {
-            --bg-color: #ef4444;
-        }
-    </style>
-
-        <div class="stat-badge theme-blue">
-            <div class="stat-label">Available Drivers</div>
-            <div class="stat-value">100</div>
-        </div>
-        <!-- Available Trucks -->
-        <div class="stat-badge theme-orange">
-            <div class="stat-label">Available Trucks</div>
-            <div class="stat-value">100</div>
-        </div>
-        <!-- Available Trailer -->
-        <div class="stat-badge theme-olive">
-            <div class="stat-label">Available Trailer</div>
-            <div class="stat-value">100</div>
-        </div>
-        <!-- ELD Status -->
-        <div class="stat-badge theme-blue">
-            <div class="stat-label">ELD Status</div>
-            <div class="stat-value bg-green">100</div>
-            <div class="stat-value bg-gray">100</div>
-            <div class="stat-value bg-red">100</div>
-        </div>
-    </div>
-
-
-                            </div>
-                            <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#mainFilter" aria-expanded="false" aria-controls="mainFilter">Filter</button>
-                        </div>
-                        <div class="card-body">
-                            <div class="main-section bg-white p-0 mb-4 collapse" id="mainFilter">
-                                <form action="#">
-                                    <div class="col-md-12 form-container mt-0 pb-0">
-                                        <div class="row form-row form-group mb-0">
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="input-data">
-                                                    <input type="text" required>
-                                                    <label>Broker Name</label>
-                                                    <img src="assets/images/roles-icon.svg" class="input-icon" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="input-data">
-                                                    <select name="" id="" class="form-select w-100" style="font-size: inherit;">
-                                                        <option value="" selected disabled></option>
-                                                        <option value="">Truck 1</option>
-                                                        <option value="">Truck 2</option>
-                                                        <option value="">Truck 3</option>
-                                                        <option value="">Truck 4</option>
-                                                    </select>
-                                                    <label> Select Truck </label>
-                                                    
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="input-data">
-                                                    <select name="" id="" class="form-select w-100" style="font-size: inherit;">
-                                                        <option value="" selected disabled></option>
-                                                        <option value="">Trailer 1</option>
-                                                        <option value="">Trailer 2</option>
-                                                        <option value="">Trailer 3</option>
-                                                        <option value="">Trailer 4</option>
-                                                    </select>
-                                                    <label> Select Trailer </label>
-                                                    
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="input-data">
-                                                    <select name="" id="" class="form-select w-100" style="font-size: inherit;">
-                                                        <option value="" selected disabled></option>
-                                                        <option value="">Driver 1</option>
-                                                        <option value="">Driver 2</option>
-                                                        <option value="">Driver 3</option>
-                                                        <option value="">Driver 4</option>
-                                                    </select>
-                                                    <label> Select Driver </label>
-                                                    
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="input-data">
-                                                    <select name="" id="" class="form-select w-100" style="font-size: inherit;">
-                                                        <option value="" selected disabled></option>
-                                                        <option value="">Status 1</option>
-                                                        <option value="">Status 2</option>
-                                                        <option value="">Status 3</option>
-                                                        <option value="">Status 4</option>
-                                                    </select>
-                                                    <label> Select Status</label>
-                                                    
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-sm-6 col-md-3">
-                                                <div class="input-data">
-                                                    <input type="text" required>
-                                                    <label>Select Date</label>
-                                                    <img src="assets/images/Calendar.svg" class="input-icon" alt="">
-                                                </div>
-                                            </div> 
-
-                                            <div class="col-sm-6 col-md-1">
-                                                <button type="submit" class="float-start btn btn-primary mt-0 mb-3">Search</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="main-section">
-                                <div class="table-responsive" style="border-bottom: 0 solid #fff !important;">
-                                    <table id="datatable" border="0" class="load-list table text-center" >
-                                        <thead>
-                                            <tr>
-                                                <th class="text-center"> Sr No. </th>
-                                                <th class="text-center"> LOAD NO. </th>
-                                                <th class="text-center"> Broker Name </th>
-                                                <th class="text-center"> Ref No. </th>
-                                                <th class="text-center"> Truck / Trailers </th>
-                                                <th class="text-center"> Driver Name </th>
-                                                <th class="text-center"> legs start <br> (Pickup Date Range) </th>
-                                                <th class="text-center"> legs End <br> (drop Date Range) </th>
-                                                <th class="text-center"> Curent Location </th>
-                                                <th class="text-center"> Load Type </th>
-                                                <th class="text-center"> ETA </th>
-                                                <th class="text-center"> Lane </th>
-
-                                                <th class="text-center"> Action </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="running">
-                                                <td class="status">1 <span> Running</span></td>
-                                                <td>A0CC1397121 <br> <span class="text-success">On the Way</span></td>
-                                                <td><a href="#" class="text-decoration-none">Truck Dispatcher</a></td>
-                                                <td>110021321</td>
-                                                <td>A0CC1397121</td>
-                                                <td><a href="#" class="text-decoration-none">Sukhpreet Singh <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td> <a href="#" class="text-decoration-none">EURO LINK YARD, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td> <a href="#" class="text-decoration-none">WINDSOR, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td><a href="#" class="text-decoration-none">EURO LINK YARD, ON </a></td>
-                                                <td><a href="#" class="text-decoration-none">Full   </a></td>
-                                                <td><a href="#" class="text-decoration-none">Jun 25, 2024 <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td>
-                                                <span class="lane-badge">
-                                                        <span> MoonLit Star </span>
-                                                        <!-- <span> MoonLit  dfasdas f dasStar </span> -->
-                                                        <a href="#"><img src="assets/images/add-icon.svg" alt="" srcset=""></a> 
-                                                    </span>    
-                                                 </td>
-                                                <td><p class="mb-2 text-center"><button class="btn btn-sm blue">Update</button><button class="btn btn-sm ltblu">More info</button></p>
-                                                    <p class="mb-0 text-center"><button class="btn btn-sm black">Pickup Docs</button><button class="btn btn-sm yellow">Upload POD</button></p>
-                                                </td>
-                                            </tr>
-
-                                            <tr class="express">
-                                                <td style="background-color:#FFF8E5 !important" class="status">2 <span> New</span></td>
-                                                <td style="background-color:#FFF8E5 !important">A0CC1397121 <br> <span style="color:red">Assign</span></td>
-                                                <td style="background-color:#FFF8E5 !important"><a href="#" class="text-decoration-none">Truck Dispatcher</a></td>
-                                                <td style="background-color:#FFF8E5 !important">110021321</td>
-                                                <td style="background-color:#FFF8E5 !important"><a href="#" class="btn btn-sm ltblu px-3"> Assign Truck / Trailer </a></td>
-                                                <td style="background-color:#FFF8E5 !important"><a href="#" class="btn btn-sm ltblu px-3"> Assign Driver </a></td>
-                                                 <td style="background-color:#FFF8E5 !important"> <a href="#" class="text-decoration-none">EURO LINK YARD, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                 <td style="background-color:#FFF8E5 !important"> <a href="#" class="text-decoration-none">WINDSOR, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td style="background-color:#FFF8E5 !important"><a href="#" class="text-decoration-none">EURO LINK YARD, ON </a></td>
-                                                <td style="background-color:#FFF8E5 !important"><a href="#" class="text-decoration-none">Full   </a></td>
-                                                <td style="background-color:#FFF8E5 !important"><a href="#" class="text-decoration-none">Jun 25, 2024 <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td style="background-color:#FFF8E5 !important">
-                                                    <span class="lane-badge">
-                                                        <span> MoonLit Star </span>
-                                                        <span> MoonLit  dfasdas f dasStar </span>
-                                                        <a href="#"><img src="assets/images/add-icon.svg" alt="" srcset=""></a> 
-                                                    </span>
-                                                 </td>
-                                                <td><p class="mb-2 text-center"><button class="btn btn-sm blue">Update</button><button class="btn btn-sm ltblu">More info</button></p>
-                                                    <p class="mb-0 text-center"><button class="btn btn-sm black">Pickup Docs</button><button class="btn btn-sm yellow">Upload POD</button></p>
-                                                </td>
-                                            </tr>
-
-                                          
-                                            <tr class="new">
-                                                <td class="status">3 <span> New </span></td>
-                                                <td>A0CC1397121 <br> <span class="text-success">On the Way</span></td>
-                                                <td><a href="#" class="text-decoration-none">Truck Dispatcher</a></td>
-                                                <td>110021321</td>
-                                                <td>A0CC1397121</td>
-                                                <td><a href="#" class="text-decoration-none">Sukhpreet Singh <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td> <a href="#" class="text-decoration-none">EURO LINK YARD, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td> <a href="#" class="text-decoration-none">WINDSOR, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td><a href="#" class="text-decoration-none">EURO LINK YARD, ON </a></td>
-                                                <td><a href="#" class="text-decoration-none">Full   </a></td>
-                                                <td><a href="#" class="text-decoration-none">Jun 25, 2024 <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td>
-                                                <span class="lane-badge">
-                                                        <span> MoonLit Star </span>
-                                                        <!-- <span> MoonLit  dfasdas f dasStar </span> -->
-                                                        <a href="#"><img src="assets/images/add-icon.svg" alt="" srcset=""></a> 
-                                                    </span>    
-                                                 </td>
-                                                <td><p class="mb-2 text-center"><button class="btn btn-sm blue">Update</button><button class="btn btn-sm ltblu">More info</button></p>
-                                                    <p class="mb-0 text-center"><button class="btn btn-sm black">Pickup Docs</button><button class="btn btn-sm yellow">Upload POD</button></p>
-                                                </td>
-                                            </tr>
-
-                                            <tr class="running">
-                                                <td class="status">4 <span> Running</span></td>
-                                                <td>A0CC1397121 <br> <span class="text-success">On the Way</span></td>
-                                                <td><a href="#" class="text-decoration-none">Truck Dispatcher</a></td>
-                                                <td>110021321</td>
-                                                <td>A0CC1397121</td>
-                                                <td><a href="#" class="text-decoration-none">Sukhpreet Singh <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td> <a href="#" class="text-decoration-none">EURO LINK YARD, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td> <a href="#" class="text-decoration-none">WINDSOR, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td><a href="#" class="text-decoration-none">EURO LINK YARD, ON </a></td>
-                                                <td><a href="#" class="text-decoration-none">Full   </a></td>
-                                                <td><a href="#" class="text-decoration-none">Jun 25, 2024 <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td>
-                                                <span class="lane-badge">
-                                                        <span> MoonLit Star </span>
-                                                        <!-- <span> MoonLit  dfasdas f dasStar </span> -->
-                                                        <a href="#"><img src="assets/images/add-icon.svg" alt="" srcset=""></a> 
-                                                    </span>    
-                                                 </td>
-                                                <td><p class="mb-2 text-center"><button class="btn btn-sm blue">Update</button><button class="btn btn-sm ltblu">More info</button></p>
-                                                    <p class="mb-0 text-center"><button class="btn btn-sm black">Pickup Docs</button><button class="btn btn-sm yellow">Upload POD</button></p>
-                                                </td>
-                                            </tr>
-
-                                            <tr class="running">
-                                                <td class="status">5 <span> Running</span></td>
-                                                <td>A0CC1397121 <br> <span class="text-success">On the Way</span></td>
-                                                <td><a href="#" class="text-decoration-none">Truck Dispatcher</a></td>
-                                                <td>110021321</td>
-                                                <td>A0CC1397121</td>
-                                                <td><a href="#" class="text-decoration-none">Sukhpreet Singh <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td> <a href="#" class="text-decoration-none">EURO LINK YARD, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td> <a href="#" class="text-decoration-none">WINDSOR, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td><a href="#" class="text-decoration-none">EURO LINK YARD, ON </a></td>
-                                                <td><a href="#" class="text-decoration-none">Full   </a></td>
-                                                <td><a href="#" class="text-decoration-none">Jun 25, 2024 <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td>
-                                                <span class="lane-badge">
-                                                        <span> MoonLit Star </span>
-                                                        <!-- <span> MoonLit  dfasdas f dasStar </span> -->
-                                                        <a href="#"><img src="assets/images/add-icon.svg" alt="" srcset=""></a> 
-                                                    </span>    
-                                                 </td>
-                                                <td><p class="mb-2 text-center"><button class="btn btn-sm blue">Update</button><button class="btn btn-sm ltblu">More info</button></p>
-                                                    <p class="mb-0 text-center"><button class="btn btn-sm black">Pickup Docs</button><button class="btn btn-sm yellow">Upload POD</button></p>
-                                                </td>
-                                            </tr>
-
-                                            <tr class="stpld">
-                                                <td style="background-color: #E1E5FE !important;" class="status">6 <span> stpld</span></td>
-                                                <td style="background-color: #E1E5FE !important;">A0CC1397121 <br> <span class="text-success">On the Way</span></td>
-                                                <td style="background-color: #E1E5FE !important;"><a href="#" class="text-decoration-none">Truck Dispatcher</a></td>
-                                                <td style="background-color: #E1E5FE !important;">110021321</td>
-                                                <td style="background-color: #E1E5FE !important;">A0CC1397121</td>
-                                                <td style="background-color: #E1E5FE !important;"><a href="#" class="text-decoration-none">Sukhpreet Singh <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td style="background-color: #E1E5FE !important;"> <a href="#" class="text-decoration-none">EURO LINK YARD, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td style="background-color: #E1E5FE !important;"> <a href="#" class="text-decoration-none">WINDSOR, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td style="background-color: #E1E5FE !important;"><a href="#" class="text-decoration-none">EURO LINK YARD, ON </a></td>
-                                                <td style="background-color: #E1E5FE !important;"><a href="#" class="text-decoration-none">Full   </a></td>
-                                                <td style="background-color: #E1E5FE !important;"><a href="#" class="text-decoration-none">Jun 25, 2024 <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td style="background-color: #E1E5FE !important;">
-                                                <span class="lane-badge">
-                                                        <span> MoonLit Star </span>
-                                                        <!-- <span> MoonLit  dfasdas f dasStar </span> -->
-                                                        <a href="#"><img src="assets/images/add-icon.svg" alt="" srcset=""></a> 
-                                                    </span>    
-                                                 </td>
-                                                <td style="background-color: #E1E5FE !important;"><p class="mb-2 text-center"><button class="btn btn-sm blue">Update</button><button class="btn btn-sm ltblu">More info</button></p>
-                                                    <p class="mb-0 text-center"><button class="btn btn-sm black">Pickup Docs</button><button class="btn btn-sm yellow">Upload POD</button></p>
-                                                </td>
-                                            </tr>
-
-                                            <tr class="running">
-                                                <td class="status">7 <span> Running</span></td>
-                                                <td>A0CC1397121 <br> <span class="text-success">On the Way</span></td>
-                                                <td><a href="#" class="text-decoration-none">Truck Dispatcher</a></td>
-                                                <td>110021321</td>
-                                                <td>A0CC1397121</td>
-                                                <td><a href="#" class="text-decoration-none">Sukhpreet Singh <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td> <a href="#" class="text-decoration-none">EURO LINK YARD, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td> <a href="#" class="text-decoration-none">WINDSOR, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td><a href="#" class="text-decoration-none">EURO LINK YARD, ON </a></td>
-                                                <td><a href="#" class="text-decoration-none">Full   </a></td>
-                                                <td><a href="#" class="text-decoration-none">Jun 25, 2024 <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td>
-                                                <span class="lane-badge">
-                                                        <span> MoonLit Star </span>
-                                                        <!-- <span> MoonLit  dfasdas f dasStar </span> -->
-                                                        <a href="#"><img src="assets/images/add-icon.svg" alt="" srcset=""></a> 
-                                                    </span>    
-                                                 </td>
-                                                <td><p class="mb-2 text-center"><button class="btn btn-sm blue">Update</button><button class="btn btn-sm ltblu">More info</button></p>
-                                                    <p class="mb-0 text-center"><button class="btn btn-sm black">Pickup Docs</button><button class="btn btn-sm yellow">Upload POD</button></p>
-                                                </td>
-                                            </tr>
-
-                                            <tr class="running">
-                                                <td class="status">8 <span> Running</span></td>
-                                                <td>A0CC1397121 <br> <span class="text-success">On the Way</span></td>
-                                                <td><a href="#" class="text-decoration-none">Truck Dispatcher</a></td>
-                                                <td>110021321</td>
-                                                <td>A0CC1397121</td>
-                                                <td><a href="#" class="text-decoration-none">Sukhpreet Singh <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td> <a href="#" class="text-decoration-none">EURO LINK YARD, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td> <a href="#" class="text-decoration-none">WINDSOR, ON <br> Jun 25, 2024 <br> 09:00 - 10:00 </a></td>
-                                                <td><a href="#" class="text-decoration-none">EURO LINK YARD, ON </a></td>
-                                                <td><a href="#" class="text-decoration-none">Full   </a></td>
-                                                <td><a href="#" class="text-decoration-none">Jun 25, 2024 <img src="assets/images/edit.svg" alt=""> </a></td> 
-                                                <td>
-                                                <span class="lane-badge">
-                                                        <span> MoonLit Star </span>
-                                                        <!-- <span> MoonLit  dfasdas f dasStar </span> -->
-                                                        <a href="#"><img src="assets/images/add-icon.svg" alt="" srcset=""></a> 
-                                                    </span>    
-                                                 </td>
-                                                <td><p class="mb-2 text-center"><button class="btn btn-sm blue">Update</button><button class="btn btn-sm ltblu">More info</button></p>
-                                                    <p class="mb-0 text-center"><button class="btn btn-sm black">Pickup Docs</button><button class="btn btn-sm yellow">Upload POD</button></p>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                        </div>
+                  <div class="stats-row">
+                    <!-- Available Drivers -->
+                    <div class="stat-badge theme-blue">
+                      <div class="stat-label">Available Drivers</div>
+                      <div class="stat-value">100</div>
                     </div>
-                </div>
-            </div>
-            <!-- Nav Header Component End --> 
-        </div>
+                    <!-- Available Trucks -->
+                    <div class="stat-badge theme-orange">
+                      <div class="stat-label">Available Trucks</div>
+                      <div class="stat-value">100</div>
+                    </div>
+                    <!-- Available Trailer -->
+                    <div class="stat-badge theme-olive">
+                      <div class="stat-label">Available Trailer</div>
+                      <div class="stat-value">100</div>
+                    </div>
+                    <!-- ELD Status -->
+                    <div class="stat-badge theme-blue">
+                      <div class="stat-label">ELD Status</div>
+                      <a
+                        class="stat-value bg-green"
+                        href="#"
+                        title="asdfadf"
+                        data-tooltip="asdfadf"
+                        >100</a
+                      >
 
-        <!-- Footer Section Start -->
-        <footer class="footer">
-            <div class="footer-body">
-                <ul class="left-panel list-inline mb-0 p-0">
-                    <li class="list-inline-item"><a href="#">Privacy Policy</a>
-                    </li>
-                    <li class="list-inline-item"><a href="#">Terms of Use</a>
-                    </li>
-                </ul>
-                <div class="right-panel">
-                    © All Rights Reserved
-                    <span> </span> by <a href="#/">Vismaad Media Tech</a>.
+                      <a
+                        class="stat-value bg-gray"
+                        href="#"
+                        title="asdfadf"
+                        data-tooltip="asdfadf"
+                        >100</a
+                      >
+
+                      <a
+                        class="stat-value bg-red"
+                        href="#"
+                        title="asdfadf"
+                        data-tooltip="asdfadf"
+                        >100</a
+                      >
+                    </div>
+                  </div>
                 </div>
+
+                <div class="our-filters mb-3">
+                  <button
+                    class="btn btn-green btn-sm"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#"
+                    aria-expanded="false"
+                    aria-controls="mainFilter"
+                  >
+                    Quick Filter
+                  </button>
+
+                  <button
+                    class="btn btn-sm btn-blue"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainFilter"
+                    aria-expanded="false"
+                    aria-controls="mainFilter"
+                  >
+                    Filter
+                  </button>
+
+                  <button
+                    class="btn btn-olive btn-sm"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#"
+                    aria-expanded="false"
+                    aria-controls="mainFilter"
+                  >
+                    Advance Search
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div
+                  class="main-section bg-white p-0 mb-4 collapse"
+                  id="mainFilter"
+                >
+                  <form action="#">
+                    <div class="col-md-12 form-container mt-0 pb-0">
+                      <div class="row form-row form-group mb-0">
+                        <div class="col-sm-6 col-md-3">
+                          <div class="input-data">
+                            <select
+                              multiple
+                              placeholder="Choose skills"
+                              data-allow-clear="1"
+                              name=""
+                            >
+                              <option>Broker 1</option>
+                              <option>Broker 2</option>
+                              <option>Broker 3</option>
+                              <option>Broker 4</option>
+                              <option>Broker 5</option> 
+                            </select>
+                              <label>Broker Name</label>
+                               <img
+                              src="assets/images/roles-icon.svg"
+                              class="input-icon"
+                              alt=""
+                            />
+                            </div>  
+                        </div>
+
+                        <div class="col-sm-6 col-md-3"> 
+                           <div class="input-data">
+                            <select
+                              multiple
+                              placeholder="Choose skills"
+                              data-allow-clear="1"
+                              name=""
+                            >
+                              <option>Truck 1</option>
+                              <option>Truck 2</option>
+                              <option>Truck 3</option>
+                              <option>Truck 4</option>
+                              <option>Truck 5</option> 
+                            </select>
+                              <label>Select Truck</label>
+                               <img
+                              src="assets/images/truck-icon.svg"
+                              class="input-icon"
+                              alt=""
+                            />
+                            </div>  
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+
+                           <div class="input-data">
+                            <select
+                              multiple
+                              placeholder="Choose skills"
+                              data-allow-clear="1"
+                              name=""
+                            >
+                              <option>Trailer 1</option>
+                              <option>Trailer 2</option>
+                              <option>Trailer 3</option>
+                              <option>Trailer 4</option>
+                              <option>Trailer 5</option> 
+                            </select>
+                              <label>Select Trailer</label>
+                               <img
+                              src="assets/images/trailer-icon.svg"
+                              class="input-icon"
+                              alt=""
+                            />
+                            </div>   
+                          
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                          <div class="input-data">
+                            <select
+                              multiple
+                              placeholder="Choose skills"
+                              data-allow-clear="1"
+                              name=""
+                            >
+                              <option>Driver 1</option>
+                              <option>Driver 2</option>
+                              <option>Driver 3</option>
+                              <option>Driver 4</option>
+                              <option>Driver 5</option> 
+                            </select>
+                              <label>Select Driver</label>
+                               <img
+                              src="assets/images/driver-icon.svg"
+                              class="input-icon"
+                              alt=""
+                            />
+                            </div>  
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                          <div class="input-data">
+                            <select
+                              multiple
+                              placeholder="Choose skills"
+                              data-allow-clear="1"
+                              name=""
+                            >
+                              <option>Status 1</option>
+                              <option>Status 2</option>
+                              <option>Status 3</option>
+                              <option>Status 4</option>
+                              <option>Status 5</option> 
+                            </select>
+                              <label>Select Status</label>
+                               <img
+                              src="assets/images/roles-icon.svg"
+                              class="input-icon"
+                              alt=""
+                            />
+                            </div>  
+
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                          <div class="input-data">
+                            <input type="text" required />
+                            <label>Pick Date</label>
+                            <img
+                              src="assets/images/Calendar.svg"
+                              class="input-icon"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3">
+                          <div class="input-data">
+                            <input type="text" required />
+                            <label>Drop Date</label>
+                            <img
+                              src="assets/images/Calendar.svg"
+                              class="input-icon"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-1">
+                          <button
+                            type="submit"
+                            class="float-start btn btn-primary mt-0 mb-3"
+                          >
+                            Search
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="main-section">
+                  <div
+                    class="table-responsive"
+                    style="border-bottom: 0 solid #fff !important"
+                  >
+                    <table
+                      id="datatable"
+                      border="0"
+                      class="load-list table text-center"
+                    >
+                      <thead>
+                        <tr>
+                          <th class="text-center">Sr No.</th>
+                          <th class="text-center">LOAD NO.</th>
+                          <th class="text-center">Broker Name</th>
+                          <th class="text-center">Ref No.</th>
+                          <th class="text-center">Truck / Trailers</th>
+                          <th class="text-center">Driver Name</th>
+                          <th class="text-center">
+                            legs start <br />
+                            (Pickup Date Range)
+                          </th>
+                          <th class="text-center">
+                            legs End <br />
+                            (drop Date Range)
+                          </th>
+                          <th class="text-center">Curent Location</th>
+                          <th class="text-center">Load Type</th>
+                          <th class="text-center">ETA</th>
+                          <th class="text-center">Lane</th>
+
+                          <th class="text-center">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="running">
+                          <td class="status">1 <span> Running</span></td>
+                          <td>
+                            A0CC1397121 <br />
+                            <span class="text-success">On the Way</span>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Truck Dispatcher</a
+                            >
+                          </td>
+                          <td>110021321</td>
+                          <td>A0CC1397121</td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Sukhpreet Singh
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >WINDSOR, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none">Full </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Jun 25, 2024
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <span class="lane-badge">
+                              <span> MoonLit Star </span>
+                              <!-- <span> MoonLit  dfasdas f dasStar </span> -->
+                              <a href="#"
+                                ><img
+                                  src="assets/images/add-icon.svg"
+                                  alt=""
+                                  srcset=""
+                              /></a>
+                            </span>
+                          </td>
+                          <td>
+                            <p class="mb-2 text-center">
+                              <button class="btn btn-sm blue">Update</button
+                              ><button class="btn btn-sm ltblu">
+                                More info
+                              </button>
+                            </p>
+                            <p class="mb-0 text-center">
+                              <button class="btn btn-sm black">
+                                Pickup Docs</button
+                              ><button class="btn btn-sm yellow">
+                                Upload POD
+                              </button>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr class="express">
+                          <td
+                            style="background-color: #fff8e5 !important"
+                            class="status"
+                          >
+                            2 <span> New</span>
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            A0CC1397121 <br />
+                            <span style="color: red">Assign</span>
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            <a href="#" class="text-decoration-none"
+                              >Truck Dispatcher</a
+                            >
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            110021321
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            <a href="#" class="btn btn-sm ltblu px-3">
+                              Assign Truck / Trailer
+                            </a>
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            <a href="#" class="btn btn-sm ltblu px-3">
+                              Assign Driver
+                            </a>
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            <a href="#" class="text-decoration-none"
+                              >WINDSOR, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON
+                            </a>
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            <a href="#" class="text-decoration-none">Full </a>
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            <a href="#" class="text-decoration-none"
+                              >Jun 25, 2024
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td style="background-color: #fff8e5 !important">
+                            <span class="lane-badge">
+                              <span> MoonLit Star </span>
+                              <span> MoonLit dfasdas f dasStar </span>
+                              <a href="#"
+                                ><img
+                                  src="assets/images/add-icon.svg"
+                                  alt=""
+                                  srcset=""
+                              /></a>
+                            </span>
+                          </td>
+                          <td>
+                            <p class="mb-2 text-center">
+                              <button class="btn btn-sm blue">Update</button
+                              ><button class="btn btn-sm ltblu">
+                                More info
+                              </button>
+                            </p>
+                            <p class="mb-0 text-center">
+                              <button class="btn btn-sm black">
+                                Pickup Docs</button
+                              ><button class="btn btn-sm yellow">
+                                Upload POD
+                              </button>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr class="new">
+                          <td class="status">3 <span> New </span></td>
+                          <td>
+                            A0CC1397121 <br />
+                            <span class="text-success">On the Way</span>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Truck Dispatcher</a
+                            >
+                          </td>
+                          <td>110021321</td>
+                          <td>A0CC1397121</td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Sukhpreet Singh
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >WINDSOR, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none">Full </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Jun 25, 2024
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <span class="lane-badge">
+                              <span> MoonLit Star </span>
+                              <!-- <span> MoonLit  dfasdas f dasStar </span> -->
+                              <a href="#"
+                                ><img
+                                  src="assets/images/add-icon.svg"
+                                  alt=""
+                                  srcset=""
+                              /></a>
+                            </span>
+                          </td>
+                          <td>
+                            <p class="mb-2 text-center">
+                              <button class="btn btn-sm blue">Update</button
+                              ><button class="btn btn-sm ltblu">
+                                More info
+                              </button>
+                            </p>
+                            <p class="mb-0 text-center">
+                              <button class="btn btn-sm black">
+                                Pickup Docs</button
+                              ><button class="btn btn-sm yellow">
+                                Upload POD
+                              </button>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr class="running">
+                          <td class="status">4 <span> Running</span></td>
+                          <td>
+                            A0CC1397121 <br />
+                            <span class="text-success">On the Way</span>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Truck Dispatcher</a
+                            >
+                          </td>
+                          <td>110021321</td>
+                          <td>A0CC1397121</td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Sukhpreet Singh
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >WINDSOR, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none">Full </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Jun 25, 2024
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <span class="lane-badge">
+                              <span> MoonLit Star </span>
+                              <!-- <span> MoonLit  dfasdas f dasStar </span> -->
+                              <a href="#"
+                                ><img
+                                  src="assets/images/add-icon.svg"
+                                  alt=""
+                                  srcset=""
+                              /></a>
+                            </span>
+                          </td>
+                          <td>
+                            <p class="mb-2 text-center">
+                              <button class="btn btn-sm blue">Update</button
+                              ><button class="btn btn-sm ltblu">
+                                More info
+                              </button>
+                            </p>
+                            <p class="mb-0 text-center">
+                              <button class="btn btn-sm black">
+                                Pickup Docs</button
+                              ><button class="btn btn-sm yellow">
+                                Upload POD
+                              </button>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr class="running">
+                          <td class="status">5 <span> Running</span></td>
+                          <td>
+                            A0CC1397121 <br />
+                            <span class="text-success">On the Way</span>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Truck Dispatcher</a
+                            >
+                          </td>
+                          <td>110021321</td>
+                          <td>A0CC1397121</td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Sukhpreet Singh
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >WINDSOR, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none">Full </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Jun 25, 2024
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <span class="lane-badge">
+                              <span> MoonLit Star </span>
+                              <!-- <span> MoonLit  dfasdas f dasStar </span> -->
+                              <a href="#"
+                                ><img
+                                  src="assets/images/add-icon.svg"
+                                  alt=""
+                                  srcset=""
+                              /></a>
+                            </span>
+                          </td>
+                          <td>
+                            <p class="mb-2 text-center">
+                              <button class="btn btn-sm blue">Update</button
+                              ><button class="btn btn-sm ltblu">
+                                More info
+                              </button>
+                            </p>
+                            <p class="mb-0 text-center">
+                              <button class="btn btn-sm black">
+                                Pickup Docs</button
+                              ><button class="btn btn-sm yellow">
+                                Upload POD
+                              </button>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr class="stpld">
+                          <td
+                            style="background-color: #e1e5fe !important"
+                            class="status"
+                          >
+                            6 <span> stpld</span>
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            A0CC1397121 <br />
+                            <span class="text-success">On the Way</span>
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            <a href="#" class="text-decoration-none"
+                              >Truck Dispatcher</a
+                            >
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            110021321
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            A0CC1397121
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            <a href="#" class="text-decoration-none"
+                              >Sukhpreet Singh
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            <a href="#" class="text-decoration-none"
+                              >WINDSOR, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON
+                            </a>
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            <a href="#" class="text-decoration-none">Full </a>
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            <a href="#" class="text-decoration-none"
+                              >Jun 25, 2024
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            <span class="lane-badge">
+                              <span> MoonLit Star </span>
+                              <!-- <span> MoonLit  dfasdas f dasStar </span> -->
+                              <a href="#"
+                                ><img
+                                  src="assets/images/add-icon.svg"
+                                  alt=""
+                                  srcset=""
+                              /></a>
+                            </span>
+                          </td>
+                          <td style="background-color: #e1e5fe !important">
+                            <p class="mb-2 text-center">
+                              <button class="btn btn-sm blue">Update</button
+                              ><button class="btn btn-sm ltblu">
+                                More info
+                              </button>
+                            </p>
+                            <p class="mb-0 text-center">
+                              <button class="btn btn-sm black">
+                                Pickup Docs</button
+                              ><button class="btn btn-sm yellow">
+                                Upload POD
+                              </button>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr class="running">
+                          <td class="status">7 <span> Running</span></td>
+                          <td>
+                            A0CC1397121 <br />
+                            <span class="text-success">On the Way</span>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Truck Dispatcher</a
+                            >
+                          </td>
+                          <td>110021321</td>
+                          <td>A0CC1397121</td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Sukhpreet Singh
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >WINDSOR, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none">Full </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Jun 25, 2024
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <span class="lane-badge">
+                              <span> MoonLit Star </span>
+                              <!-- <span> MoonLit  dfasdas f dasStar </span> -->
+                              <a href="#"
+                                ><img
+                                  src="assets/images/add-icon.svg"
+                                  alt=""
+                                  srcset=""
+                              /></a>
+                            </span>
+                          </td>
+                          <td>
+                            <p class="mb-2 text-center">
+                              <button class="btn btn-sm blue">Update</button
+                              ><button class="btn btn-sm ltblu">
+                                More info
+                              </button>
+                            </p>
+                            <p class="mb-0 text-center">
+                              <button class="btn btn-sm black">
+                                Pickup Docs</button
+                              ><button class="btn btn-sm yellow">
+                                Upload POD
+                              </button>
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr class="running">
+                          <td class="status">8 <span> Running</span></td>
+                          <td>
+                            A0CC1397121 <br />
+                            <span class="text-success">On the Way</span>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Truck Dispatcher</a
+                            >
+                          </td>
+                          <td>110021321</td>
+                          <td>A0CC1397121</td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Sukhpreet Singh
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >WINDSOR, ON <br />
+                              Jun 25, 2024 <br />
+                              09:00 - 10:00
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >EURO LINK YARD, ON
+                            </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none">Full </a>
+                          </td>
+                          <td>
+                            <a href="#" class="text-decoration-none"
+                              >Jun 25, 2024
+                              <img src="assets/images/edit.svg" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <span class="lane-badge">
+                              <span> MoonLit Star </span>
+                              <!-- <span> MoonLit  dfasdas f dasStar </span> -->
+                              <a href="#"
+                                ><img
+                                  src="assets/images/add-icon.svg"
+                                  alt=""
+                                  srcset=""
+                              /></a>
+                            </span>
+                          </td>
+                          <td>
+                            <p class="mb-2 text-center">
+                              <button class="btn btn-sm blue">Update</button
+                              ><button class="btn btn-sm ltblu">
+                                More info
+                              </button>
+                            </p>
+                            <p class="mb-0 text-center">
+                              <button class="btn btn-sm black">
+                                Pickup Docs</button
+                              ><button class="btn btn-sm yellow">
+                                Upload POD
+                              </button>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- pagination section starts -->
+                    <div class="pagination-container">
+                      <div class="pagination-info">
+                        Showing 1 to 10 of 60 entries
+                      </div>
+                      <div class="pagination-controls">
+                        <button class="page-btn prev-btn">
+                          <svg viewBox="0 0 24 24">
+                            <path
+                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                            />
+                          </svg>
+                          Previous
+                        </button>
+                        <button class="page-btn page-num active">1</button>
+                        <button class="page-btn page-num">2</button>
+                        <button class="page-btn page-num">3</button>
+                        <span class="page-dots">...</span>
+                        <button class="page-btn page-num">5</button>
+                        <button class="page-btn page-num">6</button>
+                        <button class="page-btn next-btn">
+                          Next
+                          <svg viewBox="0 0 24 24">
+                            <path
+                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- pagination section finish -->
+                  </div>
+                </div>
+              </div>
             </div>
-        </footer>
-        <!-- Footer Section End -->
+          </div>
+        </div>
+        <!-- Nav Header Component End -->
+      </div>
+
+      <!-- Footer Section Start -->
+      <footer class="footer">
+        <div class="footer-body">
+          <ul class="left-panel list-inline mb-0 p-0">
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+          </ul>
+          <div class="right-panel">
+            © All Rights Reserved
+            <span> </span> by <a href="#/">Vismaad Media Tech</a>.
+          </div>
+        </div>
+      </footer>
+      <!-- Footer Section End -->
     </main>
-
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/core/libs.min.js"></script>
     <script src="./assets/js/core/external.min.js"></script>
     <script src="./assets/js/plugins/fslightbox.js"></script>
     <script src="./assets/js/plugins/form-wizard.js"></script>
     <script src="./assets/vendor/aos/dist/aos.js"></script>
     <script src="./assets/js/truck-ui.js" defer></script>
-    
-    <script></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+      $(function () {
+        $("select").each(function () {
+          $(this).select2({
+            // theme: 'bootstrap4',
+            width: "style",
+            placeholder: $(this).attr("placeholder"),
+            // allowClear: Boolean($(this).data('allow-clear')),
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
